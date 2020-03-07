@@ -2,7 +2,9 @@ import Layout from '../components/Layout'
 import projects from '../config/projects'
 import ProjectTile from '../components/ProjectTile'
 
+
 const Index = (props) => {
+  
   return (
     <Layout>
       <div className='main'>
@@ -10,7 +12,7 @@ const Index = (props) => {
           Hi I'm Noah, <br />I like building stuff online.
         </div>
         <div className='sub-intro'>
-          Check out my projects <a>below</a>, <br />
+          Check out my projects <a >below</a>, <br />
           and feel free to <a href='mailto:noahmaizels@protonmail.com'>get in touch</a>.
         </div>
         <div className='section-title'>My Work</div>

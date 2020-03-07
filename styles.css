@@ -6,6 +6,7 @@
   font-family: 'Nunito', sans-serif;
   font-size: 17px;
   color: #23323B;
+  scroll-behavior: smooth;
 }
 body {
   padding: 50px 50px;

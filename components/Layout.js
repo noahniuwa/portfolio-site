@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 const Layout = (props) => {
   const [menu, setMenu] = useState('none')
   useEffect(() => {
-    // Update the document title using the browser API
     window.onclick = (event) => {
       if (event.target.id === 'burger'){
         if (menu === 'none'){
