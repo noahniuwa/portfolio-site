@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  color: #23323B;
+}
+body {
+  padding: 50px 80px;
+}
+
+.link, a {
+  text-decoration: none;
+  transition: all 200ms linear;
+  color: #23323B;
+}
+.link, a:visited {
+  color: #23323B;
+}
+
+.link, a:hover {
+  color: #984B48;
+}
