@@ -11,15 +11,15 @@ body {
   padding: 50px 80px;
 }
 
-.link, a {
+a {
   text-decoration: none;
   transition: all 200ms linear;
   color: #23323B;
 }
-.link, a:visited {
+a:visited {
   color: #23323B;
 }
 
-.link, a:hover {
+a:hover {
   color: #984B48;
 }

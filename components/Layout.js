@@ -1,21 +1,27 @@
 import Head from "next/head";
 import Link from 'next/link'
 import ActiveLink from './ActiveLink'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const Layout = (props) => {
   const [menu, setMenu] = useState('none')
-
-  const onBurgerClick = () =>{
-    if (menu === 'none'){
-      setMenu('inline-block')
+  useEffect(() => {
+    // Update the document title using the browser API
+    window.onclick = (event) => {
+      if (event.target.id === 'burger'){
+        if (menu === 'none'){
+          setMenu('')
+        }
+        else {
+          setMenu('none')
+        }
+      }
+      else {
+        setMenu('none')
+      }
     }
-    else {
-      setMenu('none')
-    }
-    console.log(menu)
-  }
+  });
 
   return (
     <div>
@@ -41,32 +47,35 @@ const Layout = (props) => {
             </div>
           </div>
         </div>
-        <img onClick={onBurgerClick} className='burger' src='burger-bar.png'/>
-        <div className='links'>
-          <ActiveLink href="/">
-            Home
-          </ActiveLink>
-          <ActiveLink href="/projects">
-            Projects
-          </ActiveLink>
-          <ActiveLink href="/contact">
-            Contact
-          </ActiveLink>
+        <div className='nav-menu'>
+          <div className='links'>
+            <ActiveLink href="/">
+              Home
+            </ActiveLink>
+            <ActiveLink href="/projects">
+              Projects
+            </ActiveLink>
+            <ActiveLink href="/contact">
+              Contact
+            </ActiveLink>
+          </div>
+          <img id='burger' className='burger' src='burger-bar.png'/>
         </div>
       </nav>
-
       <div className="Content">{props.children}</div>
     <style jsx>{`
-      .links {
+      .nav-menu {
         display: flex;
-        min-width: 300px;
-        justify-content: space-around;
+        min-width: 100px;
+        justify-content: flex-end;
         flex-direction: row;
+        align-items: center;
       }
       nav {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        align-items: center;
       }
       .logo {
         display: flex;
@@ -81,7 +90,6 @@ const Layout = (props) => {
       .personal-info-container{
         display: inline-block;
         margin-left: 15px;
-        
       }
       .personal-info {
         line-height: 1rem;
@@ -91,25 +99,34 @@ const Layout = (props) => {
         color: #CCCCCC;
       }
       .burger {
-        position: fixed;
-        right: 70px;
-        top: 70px;
         width: 30px;
         height: 30px;
       }
-      @media(max-width: 800px) {
+      @media(max-width: 1000px) {
         .links {
-          flex-direction: column;
-          align-items: flex-end;
-          display: ${menu}
+          display: ${menu};
+          position: absolute;
+          transform: translate(0px, 100px);
+          border: 2px solid #984B48;
+          width: 200px;
+          background-color: white;
+          border-radius: 5px;
         }
       }
-      @media(min-width: 800px) {
+      @media(min-width: 1000px) {
+        .links {
+          display: flex;
+          transform: translate(0px, 0px);
+          border: none;
+          width: 300px;
+          background-color: none;
+          border-radius: 0px;
+          justify-content: space-around;
+        }
         .burger {
           display: none;
         }
       }
-    
     `}</style>
     </div>
   )

@@ -1,7 +1,6 @@
 import Layout from '../components/Layout'
 import projects from '../config/projects'
 import ProjectTile from '../components/ProjectTile'
-import ActiveLink from '../components/ActiveLink'
 
 const Index = (props) => {
   return (
@@ -18,19 +17,19 @@ const Index = (props) => {
         <div className='projects-container'>
           <div className='grid-container'>
             {Object.keys(projects).map((item, i) => {
-              return <ProjectTile project={projects[item]}/>
+              return <ProjectTile key={i} project={projects[item]}/>
             })}
           </div>
         </div>
       </div>
       <style jsx>{`
        
-        .section-title {
-          padding-top: 100px;
-          padding-bottom: 50px;
-          text-align: center;
-          font-size: 3rem;
-        }
+      .section-title {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 3rem;
+      }
       .projects-container {
         display: flex;
         justify-content: center;
