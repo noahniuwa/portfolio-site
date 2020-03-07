@@ -37,7 +37,7 @@ const Layout = (props) => {
           <div className='personal-info-container'>
             <div className='personal-info name'>
             <Link href='/'>
-              <a>
+              <a className='name'>
                 Noah Maizels
               </a>
             </Link>
@@ -66,7 +66,7 @@ const Layout = (props) => {
     <style jsx>{`
       .nav-menu {
         display: flex;
-        min-width: 100px;
+        min-width: 50px;
         justify-content: flex-end;
         flex-direction: row;
         align-items: center;
@@ -86,6 +86,7 @@ const Layout = (props) => {
       .headshot {
         width: 50px;
         border-radius: 100%;
+        transition: all 200ms linear;
       }
       .personal-info-container{
         display: inline-block;
@@ -94,9 +95,14 @@ const Layout = (props) => {
       .personal-info {
         line-height: 1rem;
       }
+      .name {
+        font-size: 1rem;
+      }
       .job-title {
         margin-top: 5px;
         color: #CCCCCC;
+        font-size: 1rem;
+        transition: all 200ms linear;
       }
       .burger {
         width: 30px;
@@ -125,6 +131,26 @@ const Layout = (props) => {
         }
         .burger {
           display: none;
+        }
+      }
+      @media(max-width: 650px) {
+        .logo {
+          min-width: 100px;
+        }
+        .personal-info {
+          line-height: .8rem;
+        }
+        .job-title {
+          margin-top: 5px;
+          color: #CCCCCC;
+          font-size: .8rem;
+        }
+        .name {
+          font-size: .8rem;
+        }
+        .headshot {
+          width: 35px;
+          border-radius: 100%;
         }
       }
     `}</style>

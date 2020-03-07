@@ -36,6 +36,18 @@ const ProjectTile = ({project}) => {
           transition: 100ms linear;
           color: rgba(255, 255, 255, 1);
         }
+        @media(max-width: 650px){
+          .project-title {
+            background-color: rgba(0, 0, 0, .5);
+            transition: 300ms linear;
+            text-align: center;
+            padding-top: 130px;
+          }
+          .project  {
+            transition: 100ms linear;
+            color: rgba(255, 255, 255, 1);
+          }
+        }
         `}</style>
       </div>
     </a>
