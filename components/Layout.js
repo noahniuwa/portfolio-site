@@ -48,21 +48,27 @@ const Layout = (props) => {
         </div>
         <div className='nav-menu'>
           <div className='links'>
-            <ActiveLink href="/">
-              Home
-            </ActiveLink>
-            <ActiveLink href="/projects">
-              Projects
-            </ActiveLink>
-            <ActiveLink href="/contact">
-              Contact
-            </ActiveLink>
+            <div className='link-wrapper'>
+              <ActiveLink href="/">
+                Home
+              </ActiveLink>
+            </div>
+            <div className='link-wrapper'>
+              <ActiveLink href="/contact">
+                Contact
+              </ActiveLink>
+            </div>
           </div>
           <img id='burger' className='burger' src='burger-bar.png'/>
         </div>
       </nav>
       <div className="Content">{props.children}</div>
     <style jsx>{`
+      nav {
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
       .nav-menu {
         display: flex;
         min-width: 50px;
@@ -119,6 +125,9 @@ const Layout = (props) => {
         }
       }
       @media(min-width: 1000px) {
+        .link-wrapper {
+          margin-left: 30px;
+        }
         .links {
           display: flex;
           transform: translate(0px, 0px);
@@ -126,7 +135,7 @@ const Layout = (props) => {
           width: 300px;
           background-color: none;
           border-radius: 0px;
-          justify-content: space-around;
+          justify-content: flex-end;
         }
         .burger {
           display: none;

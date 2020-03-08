@@ -17,11 +17,11 @@ function ActiveLink({ children, href }) {
       {children}
       <style jsx>{`
       a {
-        text-decoration: none;
+        text-decoration: underline;
         transition: all 200ms linear;
         color: #23323B;
-        border-radius: 2px;
-        padding: 8px 5px;
+        border-radius: 3px;
+        padding: 8px 20px;
         display: block;
       }
       a:visited {
@@ -29,7 +29,8 @@ function ActiveLink({ children, href }) {
       }
       a:hover {
         color: #984B48;
-        background-color: #E9C87B;
+        background-color: rgba(233, 200, 123, .4);
+        border-radius: 3px;
       }
       `}</style>
     </a>
