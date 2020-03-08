@@ -117,11 +117,12 @@ const Layout = (props) => {
         .links {
           display: ${menu};
           position: absolute;
-          transform: translate(0px, 100px);
+          transform: translate(0px, 150px);
           border: 2px solid #984B48;
-          width: 200px;
+          width: 160px;
           background-color: white;
           border-radius: 5px;
+          height: 200px;
         }
       }
       @media(min-width: 1000px) {

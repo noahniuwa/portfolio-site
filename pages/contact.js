@@ -77,7 +77,7 @@ const Contact = (props) => {
           display: grid;
           grid-template-columns: 120px 120px;
           grid-template-rows: 120px 120px;
-          padding-left: 60px;
+          padding-left: 55px;
         }
       }
       `}</style>
