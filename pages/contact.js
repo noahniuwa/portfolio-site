@@ -9,7 +9,6 @@ const Contact = (props) => {
             Get in Touch
           </div>
           <div className='contact-links'>
-          
             <a href='https://github.com/noahniuwa' target='_blank'>
               <img className='icon' src='githubblack.svg'/>
             </a>
@@ -60,9 +59,7 @@ const Contact = (props) => {
           margin-right: auto;
           margin-bottom: 200px;
         }
-        main {
-          margin: 100px 50px;
-        }
+      
         @media(max-width: 1100px){
         .contact-card{
           width: 800px;
@@ -78,9 +75,9 @@ const Contact = (props) => {
         }
         .contact-links {
           display: grid;
-          grid-template-columns: 150px 150px;
-          grid-template-rows: 150px 150px;
-          padding-left: 80px;
+          grid-template-columns: 120px 120px;
+          grid-template-rows: 120px 120px;
+          padding-left: 60px;
         }
       }
       `}</style>
