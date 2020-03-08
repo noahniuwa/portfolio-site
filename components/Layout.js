@@ -117,7 +117,7 @@ const Layout = (props) => {
         .links {
           display: ${menu};
           position: absolute;
-          transform: translate(0px, 150px);
+          transform: translate(0px, 120px);
           border: 2px solid #984B48;
           width: 160px;
           background-color: white;
