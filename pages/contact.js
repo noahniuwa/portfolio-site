@@ -30,6 +30,9 @@ const Contact = (props) => {
       </main>
     
       <style jsx>{`
+        main {
+          width: 100vw;
+        }
         .contact-links {
           display: flex;
           justify-content: space-around;
@@ -67,8 +70,11 @@ const Contact = (props) => {
       }
 
       @media(max-width: 750px){
+        .section-title {
+          font-size: 2rem;
+        }
         .contact-card{
-          width: 350px;
+          width: 300px;
         }
         .contact-links {
           display: grid;
