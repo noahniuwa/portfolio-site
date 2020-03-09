@@ -111,7 +111,7 @@ const Layout = (props) => {
       nav {
         padding-left: 50px;
         padding-right: 50px;
-        height: 80px;
+        height: 90px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
@@ -120,10 +120,10 @@ const Layout = (props) => {
         width: 100%;
       }
       #hidden-nav {
-        top: -80px;
+        top: -90px;
         position: fixed;
         transition: top 0.3s;
-        height: 80px;
+        height: 90px;
         background-color: white;
         -webkit-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
         -moz-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
