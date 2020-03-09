@@ -31,6 +31,7 @@ const Contact = (props) => {
       <style jsx>{`
         main {
           width: 100vw;
+          margin-top: 100px;
         }
         .contact-links {
           display: flex;
