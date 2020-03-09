@@ -20,14 +20,6 @@ const Layout = (props) => {
         setMenu('none')
       }
     }
-    window.onscroll = () => {
-      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("hidden-nav").style.top = "0";
-      } 
-      else {
-        document.getElementById("hidden-nav").style.top = "-100px";
-      }
-    }
   });
 
   return (
@@ -39,38 +31,6 @@ const Layout = (props) => {
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&display=swap" rel="stylesheet" />
       </Head>
       <div id='spacer'></div>
-      <nav id='hidden-nav'>
-        <div className='logo'>
-          <img className='headshot' src='/headshot.jpg' />
-          <div className='personal-info-container'>
-            <div className='personal-info name'>
-            <Link href='/'>
-              <a className='name'>
-                Noah Maizels
-              </a>
-            </Link>
-            </div>
-            <div className='personal-info job-title'>
-              Web Developer
-            </div>
-          </div>
-        </div>
-        <div className='nav-menu'>
-          <div className='links'>
-            <div className='link-wrapper'>
-              <ActiveLink href="/">
-                Home
-              </ActiveLink>
-            </div>
-            <div className='link-wrapper'>
-              <ActiveLink href="/contact">
-                Contact
-              </ActiveLink>
-            </div>
-          </div>
-          <img id='burger' className='burger' src='burger-bar.png'/>
-        </div>
-      </nav>
       <nav id='nav'>
         <div className='logo'>
           <img className='headshot' src='/headshot.jpg' />
@@ -118,17 +78,11 @@ const Layout = (props) => {
         align-items: center;
         background-color: white;
         width: 100%;
-      }
-      #hidden-nav {
-        top: -90px;
-        position: fixed;
-        transition: top 0.3s;
-        height: 90px;
-        background-color: white;
         -webkit-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
         -moz-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
         box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
         z-index: 99;
+        transition: top 0.3s;
       }
 
       .nav-menu {
