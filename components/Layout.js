@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 
 const Layout = (props) => {
   const [menu, setMenu] = useState('none')
+  const [navStyle, setNavStyle] = useState({})
   useEffect(() => {
     window.onclick = (event) => {
       if (event.target.id === 'burger'){
@@ -20,6 +21,15 @@ const Layout = (props) => {
         setMenu('none')
       }
     }
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+       setNavStyle({
+         boxShadow: '0px 3px 3px 0px rgba(173,173,173,0.67)',
+        })
+    } else {
+      setNavStyle({
+        boxShadow: 'none',
+       })
+    }
   });
 
   return (
@@ -30,7 +40,7 @@ const Layout = (props) => {
         <meta charSet="utf-8" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&display=swap" rel="stylesheet" />
       </Head>
-      <div id='spacer'></div>
+      
       <nav id='nav'>
         <div className='logo'>
           <img className='headshot' src='/headshot.jpg' />
@@ -68,23 +78,29 @@ const Layout = (props) => {
       .layout {
         padding-bottom: 100px;
       }
+      #content {
+        margin-top: 140px;
+      }
       nav {
+        left: 0px;
+        top: 0px;
+        position: fixed;
         padding-left: 50px;
         padding-right: 50px;
-        height: 90px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
         align-items: center;
         background-color: white;
         width: 100%;
-        -webkit-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
-        -moz-box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
-        box-shadow: 0px 3px 3px 0px rgba(173,173,173,0.67);
+        -webkit-box-shadow: ${navStyle.boxShadow};
+        -moz-box-shadow: ${navStyle.boxShadow};
+        box-shadow: ${navStyle.boxShadow};
         z-index: 99;
-        transition: top 0.3s;
+        transition: all 300ms linear;
       }
-
+      
       .nav-menu {
         display: flex;
         min-width: 50px;

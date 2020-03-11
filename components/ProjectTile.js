@@ -64,7 +64,7 @@ const ProjectTile = ({project}) => {
           transition: 300ms linear;
           text-align: center;
           padding-top: 130px;
-        }
+         }
         .project {
           background-image: url(${project.img});
           background-size: cover;
@@ -72,10 +72,13 @@ const ProjectTile = ({project}) => {
           height: 300px;
           color: rgba(255, 255, 255, 0);
           border-radius: 10px;
+          transition: 200ms all linear;
+
         }
         .project:hover {
           transition: 100ms linear;
           color: rgba(255, 255, 255, 1);
+          transform: scale(1.03, 1.03)
         }
         @media(max-width: 650px){
           .project-details {
