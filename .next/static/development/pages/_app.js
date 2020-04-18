@@ -5101,7 +5101,7 @@ var Router = /*#__PURE__*/function () {
               return _context.stop();
           }
         }
-      }, null, this);
+      }, null, this, null, _Promise);
     }
   }, {
     key: "_getData",
@@ -5305,6 +5305,8 @@ exports.getRouteRegex = getRouteRegex;
 "use strict";
 
 
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
@@ -5453,7 +5455,7 @@ function loadGetInitialProps(App, ctx) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, _Promise);
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
@@ -8483,7 +8485,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "/Users/noahmaizels/Desktop/portfolio/pages/_app.js";
+var _jsxFileName = "/Users/noahmaizels/Desktop/portfolio-site/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -8570,7 +8572,7 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./");
-module.exports = __webpack_require__(/*! /Users/noahmaizels/Desktop/portfolio/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
+module.exports = __webpack_require__(/*! /Users/noahmaizels/Desktop/portfolio-site/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
 /***/ }),

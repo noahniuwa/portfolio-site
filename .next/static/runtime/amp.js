@@ -2308,6 +2308,8 @@ for (var i = 0; i < DOMIterables.length; i++) {
 "use strict";
 
 
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
@@ -2406,7 +2408,7 @@ function tryApplyUpdates() {
           return _context.stop();
       }
     }
-  }, null, null, [[2, 14]]);
+  }, null, null, [[2, 14]], _Promise);
 }
 
 (0, _eventsource.getEventSourceWrapper)({

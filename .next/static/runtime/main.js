@@ -4680,6 +4680,8 @@ module.exports = formatWebpackMessages;
 "use strict";
 
 
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _slicedToArray = __webpack_require__(/*! @babel/runtime-corejs2/helpers/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js");
@@ -4797,7 +4799,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/noahmaizels/Desktop/portfolio/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/noahmaizels/Desktop/portfolio-site/.next");
       return error;
     }
   };
@@ -5058,7 +5060,7 @@ function tryApplyUpdates(onHotUpdateSuccess) {
           return _context.stop();
       }
     }
-  }, null, null, [[7, 14]]);
+  }, null, null, [[7, 14]], _Promise);
 }
 
 /***/ }),
@@ -6103,6 +6105,8 @@ function displayContent(callback) {
 "use strict";
 
 
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
@@ -6154,7 +6158,7 @@ var _default = function _default(_ref) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, _Promise);
 };
 
 exports["default"] = _default;
@@ -6908,7 +6912,7 @@ var _default = function _default(_temp) {
           return _context.stop();
       }
     }
-  }, null, null, [[10, 20]]);
+  }, null, null, [[10, 20]], _Promise);
 };
 
 exports["default"] = _default;
@@ -6951,7 +6955,7 @@ function render(props) {
           return _context2.stop();
       }
     }
-  }, null, null, [[4, 9]]);
+  }, null, null, [[4, 9]], _Promise);
 } // This method handles all runtime and debug errors.
 // 404 and 500 errors are special kind of errors
 // and they are still handle via the main render method.
@@ -7027,7 +7031,7 @@ function renderError(props) {
           return _context3.stop();
       }
     }
-  });
+  }, null, null, null, _Promise);
 } // If hydrate does not exist, eg in preact.
 
 
@@ -7208,7 +7212,7 @@ function doRender(_ref5) {
           return _context4.stop();
       }
     }
-  });
+  }, null, null, null, _Promise);
 }
 
 /***/ }),
@@ -8644,7 +8648,7 @@ var Router = /*#__PURE__*/function () {
               return _context.stop();
           }
         }
-      }, null, this);
+      }, null, this, null, _Promise);
     }
   }, {
     key: "_getData",
@@ -8878,6 +8882,8 @@ exports.setConfig = setConfig;
 "use strict";
 
 
+var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+
 var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 
 var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
@@ -9026,7 +9032,7 @@ function loadGetInitialProps(App, ctx) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, _Promise);
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
